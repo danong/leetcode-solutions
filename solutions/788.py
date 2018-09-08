@@ -18,7 +18,7 @@ N  will be in range [1, 10000].
 
 """
 
-
+# brute force
 class Solution:
     rotation_mapping = {
         0: 0,
@@ -48,4 +48,4 @@ class Solution:
                 new_digits.append(self.rotation_mapping[int(digit)])
             else:
                 return False
-        return int(str(new_digits)) == x
+        return int(''.join(map(str, new_digits))) != x

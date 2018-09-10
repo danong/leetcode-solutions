@@ -49,3 +49,21 @@ class Solution:
             else:
                 return False
         return int(''.join(map(str, new_digits))) != x
+
+
+# set based
+class Solution2:
+    valid = {'2', '5', '6', '9'}
+    invalid = {'3', '4', '7'}
+
+    def rotatedDigits(self, N):
+        """
+        :type N: int
+        :rtype: int
+        """
+        count = 0
+        for x in range(1, N + 1):
+            set_x = set(str(x))
+            if set_x & self.valid and not set_x & self.invalid:
+                count += 1
+        return count

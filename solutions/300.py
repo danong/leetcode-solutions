@@ -22,4 +22,22 @@ class Solution:
         :type nums: List[int]
         :rtype: int
         """
-        pass
+        prev = nums[0]
+        count = 1
+        max_count = 1
+
+        for num in nums[1:]:
+            if num > prev:
+                count += 1
+            else:
+                max_count = max(max_count, count)
+                count = 0
+            prev = num
+            # print(prev, num, count, max_count)
+        max_count = max(max_count, count)
+        return max_count
+
+
+if __name__ == '__main__':
+    a = Solution()
+    a.lengthOfLIS([10,9,2,5,3,7,101,18])

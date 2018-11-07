@@ -15,6 +15,7 @@ A solution set is:
 ]
 """
 
+
 class Solution:
     def threeSum(self, nums):
         """
@@ -34,6 +35,7 @@ class Solution:
                 return bin_search(array, val, left_idx, mid_idx - 1)
             else:
                 return bin_search(array, val, mid_idx + 1, right_idx)
+
         if len(nums) < 3:
             return []
         solutions = set()
@@ -51,7 +53,8 @@ class Solution:
                 right -= 1
         return [list(x) for x in solutions]
 
+
 a = Solution()
-print(a.threeSum([-4,-2,-2,-2,0,1,2,2,2,3,3,4,4,6,6]))
+print(a.threeSum([-4, -2, -2, -2, 0, 1, 2, 2, 2, 3, 3, 4, 4, 6, 6]))
 # print(a.threeSum([-1, 0, 1, 2, -1, -4, 10, -8, 4, 76, -9, -23, -15, 0]))
 # print(a.threeSum([0, 0, 0, 0]))

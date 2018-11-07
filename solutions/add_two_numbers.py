@@ -14,7 +14,7 @@ class Solution(object):
         a_ptr = l1
         b_ptr = l2
         carry = False
-        sum_root = sum_ptr = ListNode(x=None) # dummy node
+        sum_root = sum_ptr = ListNode(x=None)  # dummy node
         while a_ptr or b_ptr:
             a_val = a_ptr.val if a_ptr else 0
             b_val = b_ptr.val if b_ptr else 0

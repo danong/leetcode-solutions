@@ -4,7 +4,7 @@ class Solution:
         :type grid: List[List[str]]
         :rtype: int
         """
-        if grid == []:
+        if not grid:
             return 0
         shape = (len(grid), len(grid[0]))
         visited = [[False for _ in range(shape[1])] for _ in range(shape[0])]
@@ -13,9 +13,9 @@ class Solution:
             for offset in range(-1, 2, 2):
                 new_row = row + offset
                 new_col = col + offset
-                if new_col >= 0 and new_col < shape[1]:
+                if 0 <= new_col < shape[1]:
                     yield (row, new_col)
-                if new_row >= 0 and new_row < shape[0]:
+                if 0 <= new_row < shape[0]:
                     yield (new_row, col)
         
         def visit(row, col):

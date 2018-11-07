@@ -24,7 +24,6 @@ class Solution(object):
             cur_sum, next_sum = next_sum, []
         return -1
 
-
     def coinChange_dp(self, coins, amount):
         """Dynamic programming
         :type coins: List[int]
@@ -40,6 +39,7 @@ class Solution(object):
             return -1
         else:
             return coin_count[-1]
+
 
 a = Solution()
 a.coinChange_dp([1, 2, 5], 11)

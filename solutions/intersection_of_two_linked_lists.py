@@ -15,7 +15,8 @@ def list_len(root):
 class Solution(object):
     def getIntersectionNode(self, headA, headB):
         """
-        :type head1, head1: ListNode
+        :param headA: ListNode
+        :type headB: ListNode
         :rtype: ListNode
         """
         if headA is None or headB is None:
